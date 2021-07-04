@@ -4,7 +4,10 @@
 
 ```bash
 $node -v
-v14.4.0
+v12.21.0
+
+$yarn -v
+1.22.10
 
 nuxt
 
