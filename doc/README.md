@@ -109,3 +109,11 @@ SSG(Static Site Generation)
 
 生成時にはサーバーサイドでレンダリングすることになるので、SSRを考慮した実装が必要になるのと、SSGには向き不向きがあるので、Webサイトの要件を考えて慎重に選択する必要があります。
 
+## firebase
+
+firebase project name
+portfolio-web-site-revo
+
+firestore Database
+asia-northeast1 (東京)
+
