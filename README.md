@@ -15,4 +15,8 @@ $firebase --version
 9.14.0
 ```
 
-## start up
+## start u
+
+```bash
+$yarn dev
+```

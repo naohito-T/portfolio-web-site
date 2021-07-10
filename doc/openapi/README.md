@@ -1,4 +1,9 @@
-# openAPi document作成
+# portfolio documents
+
+firebaseを使用しているためREST APIではないがopen APIを利用する
+またprojectを作成した経緯のREADMEについてはgitbookで出力するようにする。
+
+## openAPi document作成
 
 ## project start
 
@@ -67,6 +72,4 @@ APIモックはAPISproutを使用。
 
 ※OpenAPI3の動作は確認済みだがOpenAPI2は未確認なので、3を推奨
 
-## doc
 
-[URL](https://qiita.com/minato-naka/items/3b0bcf0788a2150f3171)
