@@ -283,5 +283,6 @@ plugin/firebase.jsの中に作成した。
 2. src配下に全て配置する。[参考URL](https://leotakeishi.com/blog/create-nuxt-typescript-environment/)
 3. vuetify error
   nuxt.config.tsにするとvuetifyがerrorになっていた。そのためtsconfig.jsonのtypesに追加をすると解消した。
+  `tsconfig.json`の`types: []`に`"vuetify"`を追加すれば解決できた。
 4. エディタのエラーを解消する。
 
