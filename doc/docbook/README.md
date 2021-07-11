@@ -286,3 +286,71 @@ plugin/firebase.jsの中に作成した。
   `tsconfig.json`の`types: []`に`"vuetify"`を追加すれば解決できた。
 4. エディタのエラーを解消する。
 
+## nuxt userAgent導入
+
+UA(User Agent: UA)とは
+ネット利用者が使用しているOS・ブラウザのことを指す
+一般的なインターネットブラウザを使い、HTTPに基づきサイトなどにアクセスした際にはユーザエージェントに関する各種情報が相手側に通知される仕組みとなっている。
+サイト側はユーザーエージェントを見ることでアクセスしてきたユーザがどういったOSやブラウザを使っているかを把握できる。
+そのためアクセス解析に利用されることが多い。
+```$ yarn add nuxt-user-agent```
+
+## nuxtでsassを使う準備
+会社でもインストールしていた。
+
+```$ yarn add --dev node-sass sass-loader @nuxtjs/style-resources```
+
+## nuxt composition API
+
+[参考URL](https://task-kawahara.hatenablog.com/entry/2020/12/28/124445)
+
+以下コマンドでcompositionAPIを導入する。
+```$ yarn add @nuxt/composition-api```
+
+導入後、nuxt.config.tsに以下を追記
+```ts
+buildModules: [
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
+    // https://go.nuxtjs.dev/stylelint
+    '@nuxtjs/stylelint-module',
+    // https://go.nuxtjs.dev/vuetify
+    '@nuxtjs/vuetify',
+    '@nuxtjs/composition-api',
+  ],
+```
+
+ここまでで最低限の準備が完了
+
+## nuxt typescript-runtime setup RUNTIME
+
+RUNTIME中でもTSを実行させる。
+
+[参考URL](https://qiita.com/iwata@github/items/a94c6d116a3e84911628)
+```$ yarn add @nuxt/typescript-runtime```
+
+NuxtのTS周りのNPMがいくつかに分解された。
+そのうち@nuxt/typescript-runtimeはNode環境でTSを処理するためのもの
+具体的にはnuxt.configやsererMiddlewaresでTSを使いたいときに必要になる。
+ちなみに@nuxt/typescript-runtimeはProduction環境(NODE_ENV=production)でも必要になるので、dependenciesに追加する必要があります。
+(nuxt-ts startで使用するので)
+
+また一連のnuxtコマンドをnuxt-tsにしてあげる必要がある。
+
+```json
+-    "dev": "nuxt",
+-    "build": "nuxt build",
+-    "start": "nuxt start",
+-    "generate": "nuxt generate",
+
++    "dev": "nuxt-ts",
++    "build": "nuxt-ts build",
++    "start": "nuxt-ts start",
++    "generate": "nuxt-ts generate",
+```
+
+## nuxt/typescript-buildnuxt buildでTSを扱うためのものが@nuxt/typescript-buildです。
+@nuxt/typescriptは@nuxt/typescript-buildに含まれるようになったので直接の依存は不要になります。
+@nuxt/typescriptがRuntimeとに分離されて使いやすくなった感じですね
+
+```yarn add -D @nuxt/typescript-build```
