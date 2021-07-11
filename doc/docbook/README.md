@@ -277,3 +277,11 @@ firebaseConfigの部分だけコピーする。
 
 plugin/firebase.jsの中に作成した。
 
+## nuxt typescript化
+
+1. まずはnuxt.config.jsをts化にする。ここでVuetyfiがerrorを吐いていた。npm i --save-dev @types/vuetify
+2. src配下に全て配置する。[参考URL](https://leotakeishi.com/blog/create-nuxt-typescript-environment/)
+3. vuetify error
+  nuxt.config.tsにするとvuetifyがerrorになっていた。そのためtsconfig.jsonのtypesに追加をすると解消した。
+4. エディタのエラーを解消する。
+
