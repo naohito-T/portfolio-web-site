@@ -63,35 +63,36 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api';
+// import { defineComponent } from '@nuxtjs/composition-api';
+// import {  } from ''
 
-export default defineComponent({
-  setup() {},
-});
+// export default defineComponent({
+//   setup() {},
+// });
 
-// export default {
-//   data() {
-//     return {
-//       clipped: false,
-//       drawer: false,
-//       fixed: false,
-//       items: [
-//         {
-//           icon: 'mdi-apps',
-//           title: 'Welcome',
-//           to: '/',
-//         },
-//         {
-//           icon: 'mdi-chart-bubble',
-//           title: 'Inspire',
-//           to: '/inspire',
-//         },
-//       ],
-//       miniVariant: false,
-//       right: true,
-//       rightDrawer: false,
-//       title: 'Vuetify.js',
-//     };
-//   },
-// };
+export default {
+  data() {
+    return {
+      clipped: false,
+      drawer: false,
+      fixed: false,
+      items: [
+        {
+          icon: 'mdi-apps',
+          title: 'Welcome',
+          to: '/',
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Inspire',
+          to: '/inspire',
+        },
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Vuetify.js',
+    };
+  },
+};
 </script>

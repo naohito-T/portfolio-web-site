@@ -1,6 +1,6 @@
 # Document
 
-## enviroment version
+## Document enviroment version
 
 ```bash
 $node -v
@@ -11,8 +11,16 @@ CLI version: 2.3.2
 GitBook version: 3.2.3
 ```
 
-## 次やることmemo
+## package-lock.json と yarn.lockが共存しているときの解決方法
 
+(参考URL)[https://zenn.dev/mo_ri_regen/articles/package-lock-yarn-lock]
+
+## npm自体のアップデート
+
+(参考URL)[https://qiita.com/n0bisuke/items/b2704b6ebb84f21c03c1]
+
+## 次やることmemo
+https://ics.media/entry/210120/
 ## Memo
 
 コマンドラインツールは、global に add するのがお約束。
@@ -319,6 +327,19 @@ buildModules: [
     '@nuxtjs/composition-api',
   ],
 ```
+
+### nuxtでのcomposition API 鉄則ルール
+@nuxtjs/composition-api では、従来の asyncData, fetch() そして head()に変わる API が用意されています
+
+useAsync - Nuxt Composition API
+
+useFetch - Nuxt Composition API
+
+useMeta - Nuxt Composition API
+
+
+
+
 
 ここまでで最低限の準備が完了
 
